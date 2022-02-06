@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(31, 85, 185, 0.822);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}   
+
+
+.task-list-tittle {
+    color: rgb(255, 255, 255);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.task-list-p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.task-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 800px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+}
+
+.new-task-container {
+    background-color: rgba(9, 28, 49, 0.904);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    border-radius: 1px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+}
+
+.new-task-input {
+    border-radius: 4px;;
+    color: #fff;
+    background-color: rgb(255, 255, 255, 0.15);
+    text-align: center;
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 46px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.new-task-input:focus {
+    border: 1px solid rgb(3, 21, 41);
+    background-color: rgba(151, 144, 144, 0.171);
+}
+
+.new-task-input::placeholder {
+    color: rgba(255, 255, 255, 0.466);
+}
+
+.new-task-button {
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(4, 71, 194);
+    cursor: pointer;
+    height: 45px;
+    width: 20%;
+    border: none;
+    transition: transform 0.5s;
+}
+
+.new-task-button:hover {
+    background-color: rgb(6, 49, 128);
+    transform: scale(1.05);
+}
+
+.task-list {
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    text-decoration: line-through;
+    /* color: rgba(255, 255, 255, 0.466); */
+    color: #FFF;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: rgba(9, 28, 49, 0.904);
+    padding: 20px;
+    width: 80%;
+    border-radius: 1px;
+}
