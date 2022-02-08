@@ -9,7 +9,7 @@ const tasksContainer = document.querySelector('.task-list');
 /*
 
 Essa constante vai receber uma função que vai verificar se o valor do input é maior que 0 caracteres
-Se for maior, retor true
+Se for maior, retorna true
 Se não retorna, false
 
 */
@@ -31,26 +31,10 @@ const handleAddTask = () => {
     const taskContent = document.createElement('p');
     taskContent.innerText = inputElement.value;
 
-
-    // Concluir tarefa
-    /*
-    Ao clicar no taskContent (parágrafo), vai executar uma função anônima que vai executar a função handleClick()
-    passando como parâmetro o próprio elemento clicado
-    */
-    taskContent.addEventListener('click', () => handleClick(taskContent));
-
     // Criando o íconi de lixeira
     const deleteItem = document.createElement('i');
     deleteItem.classList.add("bx");
     deleteItem.classList.add("bxs-trash");
-
-
-    // Excluir tarefa
-    /*
-    Ao clicar no deleteItem (íconi), vai executar uma função anônima que vai executar a função handleDeleteClick()
-    passando como parâmetro o próprio elemento clicado
-    */
-    deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
 
     // Juntando tudo na div criada
     /*
@@ -61,13 +45,29 @@ const handleAddTask = () => {
     */
     taskItemContainer.appendChild(taskContent);
     taskItemContainer.appendChild(deleteItem);
-
+ 
     // Adicionando a div taskItemContainer em tasksContainer
     tasksContainer.appendChild(taskItemContainer);
-
+ 
     // Após a tarefa ser criada o campo input vai ser limpo
     inputElement.value = "";
 
+
+    // Concluir tarefa
+    /*
+    Ao clicar no taskContent (parágrafo), vai executar uma função anônima que vai executar a função handleClick()
+    passando como parâmetro o próprio elemento clicado
+    */
+    taskContent.addEventListener('click', () => handleClick(taskContent));
+
+    // Excluir tarefa
+    /*
+    Ao clicar no deleteItem (íconi), vai executar uma função anônima que vai executar a função handleDeleteClick()
+    passando como parâmetro o próprio elemento clicado
+    */
+    deleteItem.addEventListener('click', () => handleDeleteClick(taskItemContainer, taskContent));
+
+    // Atualizar local storage
     updateLocalStorage();
 
 }
@@ -126,16 +126,17 @@ const updateLocalStorage = () => {
     const localStorageTasks = [...tasks].map((task) => {
       const content = task.firstChild;
       const isCompleted = content.classList.contains("completed");
-  
+    
       return { description: content.innerText, isCompleted };
     });
-  
+    console.log(JSON.stringify(localStorageTasks))
     localStorage.setItem("tasks", JSON.stringify(localStorageTasks));
   };
   
   const refreshTasksUsingLocalStorage = () => {
     const tasksFromLocalStorage = JSON.parse(localStorage.getItem("tasks"));
-  
+    console.log(tasksFromLocalStorage)
+
     if (!tasksFromLocalStorage) return;
   
     for (const task of tasksFromLocalStorage) {
@@ -149,20 +150,21 @@ const updateLocalStorage = () => {
         taskContent.classList.add("completed");
       }
   
-      taskContent.addEventListener("click", () => handleClick(taskContent));
-  
       const deleteItem = document.createElement("i");
       deleteItem.classList.add("bx");
       deleteItem.classList.add("bx-trash");
-  
+      
+      
+      taskItemContainer.appendChild(taskContent);
+      taskItemContainer.appendChild(deleteItem);
+      
+      tasksContainer.appendChild(taskItemContainer);
+      
+      taskContent.addEventListener("click", () => handleClick(taskContent));
+
       deleteItem.addEventListener("click", () =>
         handleDeleteClick(taskItemContainer, taskContent)
       );
-  
-      taskItemContainer.appendChild(taskContent);
-      taskItemContainer.appendChild(deleteItem);
-  
-      tasksContainer.appendChild(taskItemContainer);
     }
   };
   

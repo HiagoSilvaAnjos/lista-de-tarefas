@@ -52,7 +52,7 @@ body {
 .new-task-container {
     background-color: rgba(9, 28, 49, 0.904);
     padding: 20px;
-    width: 80%;
+    width: 90%;
     text-align: center;
     border-radius: 1px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
@@ -105,7 +105,7 @@ body {
     margin-top: 20px;
     background-color: rgba(9, 28, 49, 0.904);
     padding: 20px;
-    width: 80%;
+    width: 90%;
     border-radius: 4px;
 }
 
@@ -130,6 +130,25 @@ body {
     box-shadow: 0px 0px 30px 5px red;
     transform: scale(1.09);
 }
+
+
+@media (max-width: 820px) {
+    .task-container {
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .new-task-input {
+        width: 100%;
+    }
+
+    .new-task-button {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
 
 /* Utilitis */
 
