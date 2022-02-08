@@ -15,17 +15,13 @@ body {
     
 }   
 
-
-.task-list-tittle {
-    color: rgb(255, 255, 255);
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.task-list-p {
-    color: #fff;
-    font-size: 18px;
-    margin-bottom: 10px;
+@keyframes slideResult {
+    from {
+        transform: translateY(100px)
+    }
+    to {
+        transform: translateY(0px)
+    }
 }
 
 .task-container {
@@ -37,7 +33,21 @@ body {
     width: 800px;
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 5px;
+    animation: slideResult 2s;
 }
+
+.task-list-tittle {
+    color: rgb(255, 255, 255);
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.task-list-p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
 
 .new-task-container {
     background-color: rgba(9, 28, 49, 0.904);
@@ -50,7 +60,7 @@ body {
 
 .new-task-input {
     border-radius: 4px;;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.781);
     background-color: rgb(255, 255, 255, 0.15);
     text-align: center;
     border: none;
@@ -90,13 +100,50 @@ body {
 .task-list {
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    text-decoration: line-through;
-    /* color: rgba(255, 255, 255, 0.466); */
     color: #FFF;
     font-size: 20px;
     margin-top: 20px;
     background-color: rgba(9, 28, 49, 0.904);
     padding: 20px;
     width: 80%;
-    border-radius: 1px;
+    border-radius: 4px;
+}
+
+.task-item {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.task-item i {
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 6px;
+    background-color: red;
+    transition: transform 0.5s;
+}
+
+.task-item i:hover {
+    box-shadow: 0px 0px 30px 5px red;
+    transform: scale(1.09);
+}
+
+/* Utilitis */
+
+.error {
+    border: 2px solid red;
+}
+
+
+.error::placeholder {
+    font-style: italic;
+    color: rgba(59, 9, 9, 0.849);
+}
+
+.completed {
+    color: rgba(255, 255, 255, 0.767);
+    text-decoration: line-through;
 }
