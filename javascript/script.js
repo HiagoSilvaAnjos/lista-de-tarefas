@@ -178,7 +178,7 @@ const updateLocalStorage = () => {
   
       const deleteItem = document.createElement("i");
       deleteItem.classList.add("bx");
-      deleteItem.classList.add("bx-trash");
+      deleteItem.classList.add("bxs-trash");
       
       
       taskItemContainer.appendChild(taskContent);
