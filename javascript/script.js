@@ -1,6 +1,6 @@
 const inputElement = document.querySelector('.new-task-input');
 const addTaskButton = document.querySelector('.new-task-button');
-const clearTasksElement = document.querySelector('.btn-clear')
+const clearTasksElement = document.querySelector('.btn-clear');
 
 const tasksContainer = document.querySelector('.task-list');
 
@@ -132,8 +132,9 @@ const handleClearTasksElement = () => {
   
     for (const task of tasks) {
         task.remove()
-        clearTasksElement.style.display = 'none'
     }
+
+    clearTasksElement.style.display = 'none'
 
     updateLocalStorage();
 }
@@ -187,7 +188,7 @@ const updateLocalStorage = () => {
 
       if (tasksContainer.contains(taskItemContainer)) {
         clearTasksElement.style.display = 'block'
-      }
+      };
       
       taskContent.addEventListener("click", () => handleClick(taskContent));
 
@@ -197,7 +198,7 @@ const updateLocalStorage = () => {
 
       clearTasksElement.addEventListener('click', () => 
       handleClearTasksElement(taskItemContainer, taskContent))
-    }
+    };
   };
   
   refreshTasksUsingLocalStorage();
