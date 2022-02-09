@@ -7,17 +7,12 @@
 
 body {
     width: 100%;
-    height: 100vh;
-    background-color: rgba(68, 172, 146, 0.822);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+    background-color: rgba(15, 74, 92, 0.822);
 }   
 
 @keyframes slideResult {
     from {
-        transform: translateY(100px)
+        transform: translateY(-100px)
     }
     to {
         transform: translateY(0px)
@@ -25,7 +20,7 @@ body {
 }
 
 .task-container {
-    position: relative;
+    margin: 10% auto;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -38,13 +33,13 @@ body {
 }
 
 .task-list-tittle {
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255, 0.836);
     font-size: 3em;
     margin-bottom: 10px;
 }
 
 .task-list-p {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.842);
     font-size: 18px;
     margin-bottom: 10px;
 }
@@ -111,7 +106,9 @@ body {
 }
 
 .task-item {
-    
+    padding: 10px;
+    border: 3px solid rgba(172, 182, 194, 0.322);
+    border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
