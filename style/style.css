@@ -7,12 +7,12 @@
 
 body {
     width: 100%;
-    background-color: rgba(15, 74, 92, 0.822);
+    background-color: rgba(21, 90, 55, 0.74);
 }   
 
 @keyframes slideResult {
     from {
-        transform: translateY(-100px)
+        transform: translateY(100px)
     }
     to {
         transform: translateY(0px)
@@ -20,14 +20,14 @@ body {
 }
 
 .task-container {
-    margin: 10% auto;
+    margin: 8% auto;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 800px;
-    background-color: rgb(24, 52, 65);
+    background-color: rgb(38, 63, 77);
     border-radius: 5px;
     animation: slideResult 2s;
 }
@@ -107,13 +107,16 @@ body {
 
 .task-item {
     padding: 10px;
-    border: 3px solid rgba(172, 182, 194, 0.322);
+    border: 1px solid rgba(172, 182, 194, 0.767);
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 5px 0px 10px;
+}
+
+.task-item:hover {
+    background-color: rgba(255, 255, 255, 0.123);
 }
 
 .task-item i {
@@ -129,23 +132,30 @@ body {
     transform: scale(1.09);
 }
 
+.task-item i:active {
+    background-color: rgb(255, 0, 0, 0.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+}
+
 
 .btn-clear {
     display: none;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-radius: 4px;
     border: none;
     margin-top: 20px;
-    background-color: red;
+    background-color: rgb(170, 26, 26);
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: transform 0.5s;
 }
 
 .btn-clear:hover {
-    box-shadow: 0px 0px 30px 5px rgba(255, 0, 0, 0.575);
-    transform: scale(1.05);
+    background-color: rgb(190, 2, 2);
+}
+
+.btn-clear:active {
+    background-color: rgb(109, 20, 20);
 }
 
 .btn-clear i {
@@ -190,5 +200,6 @@ body {
 }
 
 .taks-container-completed {
-    background-color: rgba(15, 61, 114, 0.623);
+    background-color: rgba(33, 85, 105, 0.781);
+    border: none;
 }
