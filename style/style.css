@@ -181,6 +181,12 @@ body {
     }
 }
 
+@media (max-width: 450px) {
+    .task-item:hover {
+        background-color: transparent;
+    }
+}
+
 
 /* Utilitis */
 
