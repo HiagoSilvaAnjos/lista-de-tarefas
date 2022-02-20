@@ -10,15 +10,6 @@ body {
     background-color: rgba(21, 90, 55, 0.74);
 }   
 
-@keyframes slideResult {
-    from {
-        transform: translateY(100px)
-    }
-    to {
-        transform: translateY(0px)
-    }
-}
-
 .task-container {
     margin: 8% auto;
     padding: 20px;
@@ -29,7 +20,6 @@ body {
     width: 800px;
     background-color: rgb(38, 63, 77);
     border-radius: 5px;
-    animation: slideResult 2s;
 }
 
 .task-list-tittle {
@@ -180,13 +170,6 @@ body {
         font-size: 14px;
     }
 }
-
-@media (max-width: 450px) {
-    .task-item:hover {
-        background-color: transparent;
-    }
-}
-
 
 /* Utilitis */
 
