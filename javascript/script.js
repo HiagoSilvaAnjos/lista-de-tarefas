@@ -135,7 +135,7 @@ const handleClearTasksElement = () => {
 
   for (const task of tasks) {
     task.remove()
-  }
+  } 
 
   clearTasksElement.style.display = 'none'
 
