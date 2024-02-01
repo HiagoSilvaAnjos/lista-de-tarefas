@@ -1,194 +1,191 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    width: 100%;
-    background-color: rgba(21, 90, 55, 0.74);
-}   
+  width: 100%;
+  background-color: rgba(21, 90, 55, 0.74);
+}
 
 .task-container {
-    margin: 8% auto;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 800px;
-    background-color: rgb(38, 63, 77);
-    border-radius: 5px;
+  margin: 8% auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  background-color: rgb(38, 63, 77);
+  border-radius: 5px;
 }
 
 .task-list-tittle {
-    color: rgba(255, 255, 255, 0.836);
-    font-size: 3em;
-    margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.836);
+  font-size: 3em;
+  margin-bottom: 10px;
 }
 
 .task-list-p {
-    color: rgba(255, 255, 255, 0.842);
-    font-size: 18px;
-    margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.842);
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-
 .new-task-container {
-    background-color: rgb(9, 30, 54);
-    padding: 20px;
-    width: 90%;
-    text-align: center;
-    border-radius: 1px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+  background-color: rgb(9, 30, 54);
+  padding: 20px;
+  width: 90%;
+  text-align: center;
+  border-radius: 1px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .new-task-input {
-    border-radius: 4px;;
-    color: rgba(255, 255, 255, 0.781);
-    background-color: rgb(255, 255, 255, 0.15);
-    text-align: center;
-    border: none;
-    outline: none;
-    width: 70%;
-    height: 46px;
-    font-size: 18px;
-    margin-right: 20px;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.781);
+  background-color: rgb(255, 255, 255, 0.15);
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 70%;
+  height: 46px;
+  font-size: 18px;
+  margin-right: 20px;
 }
 
 .new-task-input:focus {
-    border: 1px solid rgb(3, 21, 41);
-    background-color: rgba(151, 144, 144, 0.171);
+  border: 1px solid rgb(3, 21, 41);
+  background-color: rgba(151, 144, 144, 0.171);
 }
 
 .new-task-input::placeholder {
-    color: rgba(255, 255, 255, 0.466);
+  color: rgba(255, 255, 255, 0.466);
 }
 
 .new-task-button {
-    border-radius: 4px;
-    font-size: 16px;
-    color: #fff;
-    background-color: rgb(4, 71, 194);
-    cursor: pointer;
-    height: 45px;
-    width: 20%;
-    border: none;
-    transition: transform 0.5s;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(4, 71, 194);
+  cursor: pointer;
+  height: 45px;
+  width: 20%;
+  border: none;
+  transition: transform 0.5s;
 }
 
 .new-task-button:hover {
-    background-color: rgb(6, 49, 128);
-    transform: scale(1.05);
+  background-color: rgb(6, 49, 128);
+  transform: scale(1.05);
 }
 
 .task-list {
-    overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    color: #FFF;
-    font-size: 20px;
-    margin-top: 20px;
-    background-color: rgba(9, 28, 49, 0.904);
-    padding: 20px;
-    width: 90%;
-    border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  background-color: rgba(9, 28, 49, 0.904);
+  padding: 20px;
+  width: 90%;
+  border-radius: 4px;
 }
 
 .task-item {
-    padding: 10px;
-    border: 1px solid rgba(172, 182, 194, 0.767);
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px 0px 10px;
+  padding: 10px;
+  border: 1px solid rgba(172, 182, 194, 0.767);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0px 10px;
 }
 
 .task-item:hover {
-    background-color: rgba(255, 255, 255, 0.123);
+  background-color: rgba(255, 255, 255, 0.123);
 }
 
 .task-item i {
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 6px;
-    background-color: red;
-    transition: transform 0.5s;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 6px;
+  background-color: red;
+  transition: transform 0.5s;
 }
 
 .task-item i:hover {
-    box-shadow: 0px 0px 30px 5px rgba(255, 0, 0, 0.562);
-    transform: scale(1.09);
+  box-shadow: 0px 0px 30px 5px rgba(255, 0, 0, 0.562);
+  transform: scale(1.09);
 }
 
 .task-item i:active {
-    background-color: rgb(255, 0, 0, 0.15);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+  background-color: rgb(255, 0, 0, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-
 .btn-clear {
-    display: none;
-    padding: 15px 20px;
-    border-radius: 4px;
-    border: none;
-    margin-top: 20px;
-    background-color: rgb(170, 26, 26);
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  display: none;
+  padding: 15px 20px;
+  border-radius: 4px;
+  border: none;
+  margin-top: 20px;
+  background-color: rgb(170, 26, 26);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .btn-clear:hover {
-    background-color: rgb(190, 2, 2);
+  background-color: rgb(190, 2, 2);
 }
 
 .btn-clear:active {
-    background-color: rgb(109, 20, 20);
+  background-color: rgb(109, 20, 20);
 }
 
 .btn-clear i {
-    margin-left: 5px;
-    color: rgb(255, 255, 255);
-    background-color: transparent;
+  margin-left: 5px;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
 }
 
 @media (max-width: 820px) {
-    .task-container {
-        width: 90%;
-        padding: 20px 0;
-    }
+  .task-container {
+    width: 90%;
+    padding: 20px 0;
+  }
 
-    .new-task-input {
-        width: 100%;
-    }
+  .new-task-input {
+    width: 100%;
+  }
 
-    .new-task-button {
-        margin-top: 15px;
-        width: 100%;
-        font-size: 14px;
-    }
+  .new-task-button {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 /* Utilitis */
 
 .error {
-    border: 2px solid red;
+  border: 2px solid red;
 }
 
-
 .error::placeholder {
-    font-style: italic;
-    color: rgba(59, 9, 9, 0.849);
+  font-style: italic;
+  color: rgba(59, 9, 9, 0.849);
 }
 
 .completed {
-    color: rgba(255, 255, 255, 0.767);
-    text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.767);
+  text-decoration: line-through;
 }
 
 .taks-container-completed {
-    background-color: rgba(33, 85, 105, 0.781);
-    border: none;
+  background-color: rgba(33, 85, 105, 0.781);
+  border: none;
 }
