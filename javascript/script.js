@@ -112,7 +112,7 @@ const handleDeleteClick = (taskItemContainer, taskContent) => {
   const tasks = tasksContainer.childNodes;
 
   for (const task of tasks) {
-    const curretTaskIsBeingClicked = task.firstChild === taskContent
+    const curretTaskIsBeingClicked = task.firstChild === taskContent;
     if (curretTaskIsBeingClicked) {
       taskItemContainer.remove();
     }
@@ -135,7 +135,7 @@ const handleClearTasksElement = () => {
 
   for (const task of tasks) {
     task.remove()
-  } 
+  }
 
   clearTasksElement.style.display = 'none'
 
